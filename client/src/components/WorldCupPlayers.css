@@ -1,0 +1,18 @@
+.cardHolder{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainCard{
+    margin: 2%;
+    border: solid 3px red;
+    padding: 1%;
+}
+
+.cardHide{
+    display: none;
+}
+
+.cardShow{
+    display: block;
+}
