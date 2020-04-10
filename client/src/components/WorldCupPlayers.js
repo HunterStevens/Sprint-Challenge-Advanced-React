@@ -26,11 +26,7 @@ class WorldCupPlayers extends React.Component {
   
     }
     
-    // toggleCard = event => {
-    //     event.preventDefault();
-    //     console.log("toggleCard triggered");
-    //     this.props.button;
-    // }
+ 
 
     render(){
         return(
@@ -40,7 +36,7 @@ class WorldCupPlayers extends React.Component {
             <div data-testid="playerBody" className="cardHolder">
             {this.state.players.map(info =>{
                 return(
-                <div className="mainCard" key={info.id}>
+                <div data-testid="cardName" className="mainCard" key={info.id}>
                 <h3>Name: {info.name}</h3>
                 <h6 className="cardShow">Country: {info.country}</h6>
                 <p className="cardShow">Searches: {info.searches}</p>
