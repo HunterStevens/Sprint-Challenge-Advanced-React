@@ -36,7 +36,7 @@ class WorldCupPlayers extends React.Component {
     render(){
         return(
             <section>
-            <h1>PlayersInfo</h1>
+            <h1 data-testid="playerhead">Players Info</h1>
             
             <div className="cardHolder">
             {this.state.players.map(info =>{
