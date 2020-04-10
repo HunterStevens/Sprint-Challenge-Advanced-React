@@ -1,23 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import WorldCupPlayers from './components/WorldCupPlayers';
+import {useToggleHook} from './hooks/useToggleHook';
+import ButtonToggle from './components/ButtonToggle'
 
 function App() {
+  // const [cardInfo, setCardInfo] = useToggleHook(false);
+
+  // const toggleCard = () =>{
+  //   console.log("Toggle Button Triggered");
+  //   setCardInfo(!cardInfo);
+  //   console.log(cardInfo);
+  // }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <ButtonToggle/>
+        <WorldCupPlayers/>
       </header>
     </div>
   );

@@ -1,0 +1,52 @@
+import React, {useState} from 'react';
+import axios from 'axios';
+import './WorldCupPlayers.css';
+
+class WorldCupPlayers extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            players:[],
+        }
+   
+    }
+
+    
+
+    componentDidMount(){
+        axios.get("http://localhost:5000/api/players")
+        .then(res =>{
+            console.log("New Players data", res);
+            this.setState({players:res.data});
+            console.log("Fetched Api into Player state: ", this.state.players);
+        })
+        .catch(err =>{
+            console.log("ERROR: ", err);
+        })
+  
+    }
+    
+ 
+
+    render(){
+        return(
+            <section>
+            <h1 data-testid="playerhead">Players Info</h1>
+             
+            <div data-testid="playerBody" className="cardHolder">
+            {this.state.players.map(info =>{
+                return(
+                <div data-testid="cardName" className="mainCard" key={info.id}>
+                <h3>Name: {info.name}</h3>
+                <h6 className="cardShow">Country: {info.country}</h6>
+                <p className="cardShow">Searches: {info.searches}</p>
+               
+                </div>
+                )
+            })}
+            </div>
+            </section>
+        )
+    }
+}
+export default WorldCupPlayers;
