@@ -1,8 +1,8 @@
 import React from 'react';
-import useToggleHook from '../hooks/useToggleHook';
+import useDarkMode from '../hooks/useToggleHook';
 
 const ButtonToggle = () =>{
-    const [lightMode, setLightMode] = useToggleHook(false);
+    const [lightMode, setLightMode] = useDarkMode(true);
     const toggleClick = e =>{
         e.preventDefault();
         setLightMode(!lightMode);

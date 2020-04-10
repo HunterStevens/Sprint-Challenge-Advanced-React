@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import WorldCupPlayers from './components/WorldCupPlayers';
 import {useToggleHook} from './hooks/useToggleHook';
 import ButtonToggle from './components/ButtonToggle'

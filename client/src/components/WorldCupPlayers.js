@@ -7,7 +7,6 @@ class WorldCupPlayers extends React.Component {
         super();
         this.state = {
             players:[],
-            cardInfo:true
         }
    
     }
@@ -38,13 +37,13 @@ class WorldCupPlayers extends React.Component {
             <section>
             <h1 data-testid="playerhead">Players Info</h1>
              
-            <div className="cardHolder">
+            <div data-testid="playerBody" className="cardHolder">
             {this.state.players.map(info =>{
                 return(
                 <div className="mainCard" key={info.id}>
                 <h3>Name: {info.name}</h3>
-                <h6 className="cardHide">Country: {info.country}</h6>
-                <p className="cardHide">Searches: {info.searches}</p>
+                <h6 className="cardShow">Country: {info.country}</h6>
+                <p className="cardShow">Searches: {info.searches}</p>
                
                 </div>
                 )
