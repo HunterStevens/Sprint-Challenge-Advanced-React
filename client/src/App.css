@@ -31,3 +31,7 @@
     transform: rotate(360deg);
   }
 }
+.lightMode{
+  background-color: white;
+  color: purple;
+}

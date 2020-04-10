@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import WorldCupPlayers from './components/WorldCupPlayers';
+import {useToggleHook} from './hooks/useToggleHook';
 
 function App() {
-  const [cardInfo, setCardInfo] = useState(false);
+  const [cardInfo, setCardInfo] = useToggleHook(false);
 
   const toggleCard = event =>{
     event.preventDefault();
@@ -17,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <WorldCupPlayers toggleCard={toggleCard}/>
+      <button onClick={toggleCard}>Magenta Mode</button>
+        <WorldCupPlayers/>
       </header>
     </div>
   );

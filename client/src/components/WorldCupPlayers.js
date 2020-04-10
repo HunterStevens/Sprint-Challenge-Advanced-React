@@ -37,15 +37,15 @@ class WorldCupPlayers extends React.Component {
         return(
             <section>
             <h1 data-testid="playerhead">Players Info</h1>
-            
+             
             <div className="cardHolder">
             {this.state.players.map(info =>{
                 return(
                 <div className="mainCard" key={info.id}>
                 <h3>Name: {info.name}</h3>
-                <h6 className={this.cardInfo ? 'cardShow' : 'cardHide'}>Country: {info.country}</h6>
-                <p className={this.cardInfo ? 'cardShow' : 'cardHide'}>Searches: {info.searches}</p>
-                <button onClick={this.props.toggle}>Show Info</button>
+                <h6 className="cardHide">Country: {info.country}</h6>
+                <p className="cardHide">Searches: {info.searches}</p>
+               
                 </div>
                 )
             })}
